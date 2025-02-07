@@ -1,0 +1,11 @@
+<main>
+    <h3> {{product_item.ID}}. {{product_item.Name}} </h3>
+    <p> {{product_item.Price}} </p>
+
+    <button (click)="edit()">Editar</button>
+    <div *ngIf="is_editing">
+        <app-product-form-edit-product [id]="product_item.ID"></app-product-form-edit-product>
+    </div>
+
+    <button (click)="delete()" >Eliminar</button>
+</main>
